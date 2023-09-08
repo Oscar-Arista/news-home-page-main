@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* Generales */
+.wrapper {
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.row-flex { 
+    /* usar flex para lineas */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-grid {
+    /* usar grid para cajas */
+    display: grid;
+    gap: 3rem;
+   }
+.align-center {
+    align-items: center;
+}
+.col-2-1 {
+    grid-template-columns: 2fr 1fr;
+}
+
+.col-1-1 {
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.title-xl {
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 50px;
+}
+
+/* header  */
+.menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.icon-menu{
+    display: none;
+    width: 35px;
+    cursor: pointer;
+}
+
+/* article main */
+
+.btn-red {
+    background: hsl(5, 85%, 63%);
+    color: white;
+    border: 0;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.img-article-desktop{
+    display: block;
+}
+
+.img-article-mobile{
+    display: none;
+}
+
+/* News */
+.News {
+    background: hsl(240, 100%, 5%);
+    color: white;
+    padding: 1.5rem;
+}
+
+.News h3 {
+    font-size: 2em;
+    color: hsl(35, 77%, 62%);
+    margin-bottom: 1rem;
+}
+
+.news-wrapper {
+    display: grid;
+    gap: 2rem; 
+}
+
+.news-wrapper h4 {
+    margin-bottom: 0.5rem;
+}
+
+.news-wrapper p {
+    opacity: 0.85;
+}
+
+.News hr {
+    opacity: 0.7;
+}
+/* parte baja o semi-footer */
+.semi-footer {
+    display: flex;
+    gap: 3rem;
+    margin: 4rem 0rem;
+}
+/* CAJA DE ARTICULO */
+.post-column {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    align-content: space-between;
+}
+/* NUMERO Y TEXTO  */
+.post {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    padding: 0rem 0rem 0rem 1rem;
+}
+/* NUMERO */
+.post h5 {
+    color: hsl(233, 8%, 79%);
+    font-size: 2.5em;
+}
+/* TITULO */
+.post h6 {
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+}
+/* PARRAFO */
+.post p {
+    color: hsl(233, 8%, 79%);
+    font-weight: 600;
+}
+/* IMAGEN */
+.semi-footer img {
+    width: 120px;
+}
+
+/* Breakepoint hasta 992px */
+
+@media screen and (max-width: 992px){
+    body{
+        background-color: blueviolet;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{background-color: aqua;}
+    
+    .img-article-desktop{display: none;}
+    .img-article-mobile{display: block;}
+    .col-1-1 {grid-template-columns: repeat(1 ,1fr);}
+    .col-2-1 {grid-template-columns: 1fr;}
+    .menu {display: none;}
+    .icon-menu{display: block;}
+}
+
+@media screen and (max-width: 576px){
+    body{
+        background-color: coral;
+    }
+
+}
